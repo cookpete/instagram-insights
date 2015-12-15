@@ -1,5 +1,5 @@
 import fetch from 'fetch-jsonp'
-import { stringify } from 'qs'
+import { stringify } from 'query-string'
 import { normalize, Schema, arrayOf } from 'normalizr'
 import deepmerge from 'deepmerge'
 import pairs from 'lodash.pairs'
