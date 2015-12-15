@@ -39,7 +39,7 @@ export default class App extends Component {
     }
     return (
       <div className={classNames.app}>
-        <h1 className={classNames.title}>Instagram Profile Stats</h1>
+        <h1 className={classNames.title}>Instagram Insights</h1>
         <section className={classNames.section}>
           <header>
             <h2 className={classNames.heading}>Biggest Fans</h2>
