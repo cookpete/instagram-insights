@@ -1,0 +1,9 @@
+.loading {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.loaded {
+  composes: loading;
+  opacity: 1;
+}

@@ -1,0 +1,4 @@
+linters:
+  PropertySpelling:
+    extra_properties:
+      - composes

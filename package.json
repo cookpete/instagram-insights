@@ -1,7 +1,7 @@
 {
-  "name": "react-transform-boilerplate",
-  "version": "1.0.0",
-  "description": "A new Webpack boilerplate with hot reloading React components, and error handling on module and component level.",
+  "name": "instagram-insights",
+  "version": "0.0.1",
+  "description": "A simple React app to generate interesting stats about your Instagram profile",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -12,27 +12,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-transform-boilerplate.git"
+    "url": "https://github.com/cookpete/instagram-insights.git"
   },
   "keywords": [
     "react",
     "reactjs",
-    "boilerplate",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack",
-    "babel",
-    "react-transform"
+    "instagram",
+    "profile",
+    "insights",
+    "stats"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Pete Cook <pete@cookpete.com> (http://github.com/cookpete)",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/gaearon/react-transform-boilerplate/issues"
+    "url": "https://github.com/cookpete/instagram-insights/issues"
   },
-  "homepage": "https://github.com/gaearon/react-transform-boilerplate",
+  "homepage": "https://github.com/cookpete/instagram-insights",
   "devDependencies": {
     "babel-core": "^6.3.17",
     "babel-eslint": "^5.0.0-beta6",
@@ -62,8 +57,16 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
+    "deepmerge": "^0.2.10",
+    "fetch-jsonp": "^1.0.0",
+    "lodash.pairs": "^3.0.1",
+    "ls-cache": "^0.2.3",
+    "normalize.css": "^3.0.3",
+    "normalizr": "^1.4.0",
+    "qs": "^6.0.1",
     "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react-dom": "^0.14.3",
+    "webfontloader": "^1.6.16"
   },
   "standard": {
     "parser": "babel-eslint"

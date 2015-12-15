@@ -1,9 +1,9 @@
-# React Transform Boilerplate
+# Instagram Insights
 
-[CookPete](http://github.com/CookPete)’s beefed up version of [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate), with:
+[![Build Status](https://travis-ci.org/CookPete/instagram-insights.svg)](https://travis-ci.org/CookPete/instagram-insights)
+[![Dependency Status](https://david-dm.org/CookPete/instagram-insights.svg)](https://david-dm.org/CookPete/instagram-insights)
+[![devDependency Status](https://david-dm.org/CookPete/instagram-insights/dev-status.svg)](https://david-dm.org/CookPete/instagram-insights#info=devDependencies)
 
-* Cleaner naming of stuff
-* Cleaner code using [standard](https://github.com/feross/standard) code style
-* Better index file handling
-* SASS and [CSS modules](https://github.com/css-modules/css-modules) support
-* Basic [shallow render](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering) testing
+A simple React app to generate interesting stats about your Instagram profile.
+
+Uses my [fork](https://github.com/CookPete/react-transform-boilerplate) of [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate)

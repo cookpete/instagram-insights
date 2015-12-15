@@ -1,0 +1,41 @@
+@import '../variables';
+
+.app {
+  max-width: 25em;
+  margin: auto;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  padding: 0 $spacing;
+
+  @media screen and (min-width: 60em) {
+    max-width: 50em;
+  }
+}
+
+.section {
+  margin-bottom: $spacing;
+
+  @media screen and (min-width: 60em) {
+    display: inline-block;
+    width: calc((100% - #{$spacing * 2}) / 2);
+    vertical-align: top;
+
+    &:nth-child(even) {
+      margin-right: $spacing * 2;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  font-weight: 100;
+}
+
+.heading {
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+.subheading {
+  margin-bottom: 1em;
+}

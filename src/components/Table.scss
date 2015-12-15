@@ -1,0 +1,49 @@
+@import '../variables';
+
+$height: 2.5em;
+
+.table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing / 2;
+  text-decoration: none;
+}
+
+.image {
+  display: block;
+  width: $height;
+  height: $height;
+  margin-right: $spacing / 2;
+  border-radius: 50%;
+}
+
+.title {
+  flex: 1;
+  font-size: .875em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.count {
+  width: $height;
+  text-align: center;
+}
+
+.moreItem {
+  text-align: center;
+}
+
+.moreButton {
+  border: 0;
+  background: transparent;
+  color: #125688;
+  font-size: 0.875em;
+  font-weight: 500;
+}

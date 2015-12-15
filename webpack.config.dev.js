@@ -23,8 +23,11 @@ module.exports = {
       include: path.join(__dirname, 'src')
     }, {
       test: /\.scss$/,
-      loader: 'style!css?modules&sourceMap!sass?sourceMap',
+      loader: 'style!css?modules&sourceMap&localIdentName=[hash:base64:3]!sass?sourceMap',
       include: path.join(__dirname, 'src')
+    }, {
+      test: /normalize\.css$/,
+      loader: 'style!css'
     }]
   }
 }
