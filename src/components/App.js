@@ -7,7 +7,7 @@ import Table from './Table'
 import 'normalize.css/normalize.css'
 import classNames from './App.scss'
 
-const CACHE_KEY = 'media'
+const CACHE_KEY = 'state'
 const CACHE_EXPIRY = 10 // Minutes
 
 export default class App extends Component {
