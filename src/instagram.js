@@ -111,7 +111,6 @@ function createMergable (id, response, key, schema) {
 }
 
 function calculateStats (state) {
-  console.log('calculating', state)
   const maps = state.posts.reduce((maps, id) => {
     const post = state.entities.media[id]
 

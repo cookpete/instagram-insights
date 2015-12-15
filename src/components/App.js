@@ -22,7 +22,6 @@ export default class App extends Component {
       this.setState(denormalize(cached))
     } else if (get) {
       getStats(get).then(state => {
-        console.log('setting', state, denormalize(state))
         this.setState(denormalize(state))
         lscache.set(CACHE_KEY, state, CACHE_EXPIRY)
       })
