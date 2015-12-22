@@ -128,7 +128,8 @@ function calculateStats (state) {
   return deepmerge(state, {
     likes: sortObject(maps.likes, 'user'),
     comments: sortObject(maps.comments, 'user'),
-    filters: sortObject(maps.filters, 'filter')
+    filters: sortObject(maps.filters, 'filter'),
+    user: state.entities.media[state.posts[0]].user
   })
 }
 
@@ -137,7 +138,8 @@ export function denormalize (state) {
   return deepmerge(state, {
     likes: state.likes.map(item => deepmerge(item, { user: user[item.user] })),
     comments: state.comments.map(item => deepmerge(item, { user: user[item.user] })),
-    posts: state.posts.map(id => media[id])
+    posts: state.posts.map(id => media[id]),
+    user: user[state.user]
   })
 }
 

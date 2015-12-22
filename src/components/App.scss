@@ -3,12 +3,22 @@
 .app {
   max-width: 25em;
   margin: auto;
+  margin-bottom: $spacing;
+  padding: 0 $spacing;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
-  padding: 0 $spacing;
+  line-height: 1.4;
 
   @media screen and (min-width: 60em) {
     max-width: 50em;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  a {
+    color: $blue;
   }
 }
 
@@ -24,11 +34,6 @@
       margin-right: $spacing * 2;
     }
   }
-}
-
-.title {
-  text-align: center;
-  font-weight: 100;
 }
 
 .heading {

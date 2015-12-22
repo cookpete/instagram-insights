@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import lscache from 'ls-cache'
 
 import { BASE_URL, AUTH_URL, INITIAL_STATE, getStats, denormalize } from '../instagram'
+import Header from './Header'
+import UserInfo from './UserInfo'
 import Table from './Table'
 
 import 'normalize.css/normalize.css'
@@ -27,7 +29,7 @@ export default class App extends Component {
       })
     }
   }
-  render () {
+  renderContent () {
     if (!this.props.get) {
       return (
         <a href={AUTH_URL}>Login</a>
@@ -37,8 +39,8 @@ export default class App extends Component {
       return <div>Loading</div>
     }
     return (
-      <div className={classNames.app}>
-        <h1 className={classNames.title}>Instagram Insights</h1>
+      <main>
+        <UserInfo user={this.state.user} posts={this.state.posts} />
         <section className={classNames.section}>
           <header>
             <h2 className={classNames.heading}>Biggest Fans</h2>
@@ -109,6 +111,14 @@ export default class App extends Component {
             />
           }
         </section>
+      </main>
+    )
+  }
+  render () {
+    return (
+      <div className={classNames.app}>
+        <Header />
+        { this.renderContent() }
       </div>
     )
   }

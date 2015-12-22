@@ -1,0 +1,22 @@
+@import '../variables';
+
+.section {
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 6em;
+  height: 6em;
+  margin: auto;
+  margin-bottom: $spacing / 2;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: 500;
+}
+
+.info {
+  font-size: .875em;
+}

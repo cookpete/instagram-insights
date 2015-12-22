@@ -1,0 +1,27 @@
+@import '../variables';
+
+.title {
+  margin-bottom: 0;
+  font-weight: 100;
+  text-align: center;
+}
+
+.meta {
+  margin-bottom: $spacing * 2;
+  font-size: .875em;
+  text-align: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+
+    &:not(:first-child) {
+      margin-left: $spacing;
+    }
+  }
+}
