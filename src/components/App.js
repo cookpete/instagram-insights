@@ -1,14 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import lscache from 'ls-cache'
 
+import 'normalize.css/normalize.css'
+import classNames from './App.scss'
+
 import { BASE_URL, AUTH_URL, INITIAL_STATE, getStats, denormalize } from '../instagram'
 import Header from './Header'
 import UserInfo from './UserInfo'
 import Table from './Table'
 import Map from './Map'
-
-import 'normalize.css/normalize.css'
-import classNames from './App.scss'
 
 const CACHE_KEY = 'state'
 const CACHE_EXPIRY = 10 // Minutes
