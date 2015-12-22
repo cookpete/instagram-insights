@@ -5,6 +5,7 @@ import { BASE_URL, AUTH_URL, INITIAL_STATE, getStats, denormalize } from '../ins
 import Header from './Header'
 import UserInfo from './UserInfo'
 import Table from './Table'
+import Map from './Map'
 
 import 'normalize.css/normalize.css'
 import classNames from './App.scss'
@@ -110,6 +111,13 @@ export default class App extends Component {
               getLink={item => item.link}
             />
           }
+        </section>
+        <section>
+          <header>
+            <h2 className={classNames.heading}>Map</h2>
+            <div className={classNames.subheading}>See your posts across the globe</div>
+          </header>
+          <Map posts={this.state.posts.filter(post => post.location)} />
         </section>
       </main>
     )

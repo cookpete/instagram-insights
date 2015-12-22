@@ -59,6 +59,7 @@
   "dependencies": {
     "deepmerge": "^0.2.10",
     "fetch-jsonp": "^1.0.0",
+    "load-script": "^1.0.0",
     "lodash.pairs": "^3.0.1",
     "ls-cache": "^0.2.3",
     "normalize.css": "^3.0.3",
