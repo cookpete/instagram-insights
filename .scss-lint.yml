@@ -1,4 +1,8 @@
 linters:
+  PropertySortOrder:
+    order: smacss
   PropertySpelling:
     extra_properties:
       - composes
+  SelectorFormat:
+    convention: camel_case
