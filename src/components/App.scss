@@ -16,10 +16,19 @@
   strong {
     font-weight: 500;
   }
+}
 
-  a {
-    color: $blue;
-  }
+.login {
+  display: block;
+  max-width: 10em;
+  margin: auto;
+  padding: $spacing/2 $spacing;
+  border-radius: .25em;
+  background: $blue;
+  color: $white;
+  font-size: .875em;
+  text-align: center;
+  text-decoration: none;
 }
 
 .section {

@@ -33,9 +33,7 @@ export default class App extends Component {
   }
   renderContent () {
     if (!this.props.token) {
-      return (
-        <a href={AUTH_URL}>Login</a>
-      )
+      return <a className={classNames.login} href={AUTH_URL}>Sign in with Instagram</a>
     }
     if (this.state.posts.length === 0) {
       return <Spinner />
