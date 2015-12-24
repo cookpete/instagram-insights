@@ -1,0 +1,15 @@
+@import '../variables';
+
+.spinner {
+  width: 1em;
+  height: 1em;
+  margin: auto;
+  background-color: $grey;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@keyframes sk-rotateplane {
+  0% { transform: perspective(30px); }
+  50% { transform: perspective(30px) rotateY(180deg); }
+  100% { transform: perspective(30px) rotateY(180deg) rotateX(180deg); }
+}

@@ -5,6 +5,7 @@ import 'normalize.css/normalize.css'
 import classNames from './App.scss'
 
 import { BASE_URL, AUTH_URL, INITIAL_STATE, getStats, denormalize } from '../instagram'
+import Spinner from './Spinner'
 import Header from './Header'
 import UserInfo from './UserInfo'
 import Table from './Table'
@@ -37,7 +38,7 @@ export default class App extends Component {
       )
     }
     if (this.state.posts.length === 0) {
-      return <div>Loading</div>
+      return <Spinner />
     }
     return (
       <main>
