@@ -17,18 +17,17 @@ export const INITIAL_STATE = {
   posts: []
 }
 
-export function createGetter (hash) {
+export function getToken (hash) {
   const match = hash.match(MATCH_TOKEN)
+  return match ? match[1] : null
+}
 
-  if (match) {
-    const token = match[1]
-    return function (path, options = {}) {
-      const query = stringify(Object.assign(options, { access_token: token }))
-      return fetch(API_URL + path + '?' + query)
-        .then(response => response.json())
-    }
+export function createGetter (token) {
+  return function (path, options = {}) {
+    const query = stringify(Object.assign(options, { access_token: token }))
+    return fetch(API_URL + path + '?' + query)
+      .then(response => response.json())
   }
-  return false
 }
 
 const schemas = {

@@ -10,28 +10,28 @@ import UserInfo from './UserInfo'
 import Table from './Table'
 import Map from './Map'
 
-const CACHE_KEY = 'state'
 const CACHE_EXPIRY = 10 // Minutes
 
 export default class App extends Component {
   static propTypes = {
-    get: PropTypes.oneOfType([ PropTypes.func, PropTypes.bool ])
+    token: PropTypes.string,
+    get: PropTypes.func
   }
   state = INITIAL_STATE
   componentDidMount () {
-    const { get } = this.props
-    const cached = lscache.get(CACHE_KEY)
+    const { token, get } = this.props
+    const cached = lscache.get(token)
     if (cached) {
       this.setState(denormalize(cached))
     } else if (get) {
       getStats(get).then(state => {
         this.setState(denormalize(state))
-        lscache.set(CACHE_KEY, state, CACHE_EXPIRY)
+        lscache.set(token, state, CACHE_EXPIRY)
       })
     }
   }
   renderContent () {
-    if (!this.props.get) {
+    if (!this.props.token) {
       return (
         <a href={AUTH_URL}>Login</a>
       )
