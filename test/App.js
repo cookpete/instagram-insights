@@ -15,6 +15,6 @@ describe('App', () => {
   it('renders correctly', () => {
     shallowRenderer.render(<App />)
     const result = shallowRenderer.getRenderOutput()
-    expect(result.props.children).to.equal('Login')
+    expect(result.props.children).to.have.length(2)
   })
 })
