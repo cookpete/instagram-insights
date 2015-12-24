@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
+import { shorten } from '../utils'
 import Image from './Image'
 
 import classNames from './Table.scss'
@@ -41,7 +42,7 @@ export default class Table extends Component {
       <li key={id} className={classNames.item}>
         { avatar }
         <div className={classNames.title}>{ title }</div>
-        <div className={classNames.count}>{ count }</div>
+        <div className={classNames.count}>{ shorten(count) }</div>
       </li>
     )
   }
