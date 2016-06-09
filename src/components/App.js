@@ -4,7 +4,7 @@ import lscache from 'ls-cache'
 import 'normalize.css/normalize.css'
 import classNames from './App.scss'
 
-import { BASE_URL, AUTH_URL, INITIAL_STATE, getStats, denormalize } from '../instagram'
+import { AUTH_URL, INITIAL_STATE, getStats, denormalize } from '../instagram'
 import Spinner from './Spinner'
 import Header from './Header'
 import UserInfo from './UserInfo'
@@ -41,6 +41,7 @@ export default class App extends Component {
     return (
       <main>
         <UserInfo user={this.state.user} posts={this.state.posts} />
+        {/*
         <section className={classNames.section}>
           <header>
             <h2 className={classNames.heading}>Biggest Fans</h2>
@@ -71,6 +72,7 @@ export default class App extends Component {
             />
           }
         </section>
+        */}
         <section className={classNames.section}>
           <header>
             <h2 className={classNames.heading}>Best Posts</h2>

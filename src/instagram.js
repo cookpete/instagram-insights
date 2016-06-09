@@ -113,8 +113,8 @@ function calculateStats (state) {
   const maps = state.posts.reduce((maps, id) => {
     const post = state.entities.media[id]
 
-    post.likes.data.forEach(count(maps.likes))
-    post.comments.data.forEach(comment => count(maps.comments)(comment.from))
+    post.likes.data && post.likes.data.forEach(count(maps.likes))
+    post.comments.data && post.comments.data.forEach(comment => count(maps.comments)(comment.from))
     count(maps.filters)(post.filter)
 
     return maps
